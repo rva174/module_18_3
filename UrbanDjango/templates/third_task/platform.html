@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title </title>
+    <title>{{ title }}</title>
 </head>
 <body>
     <h1>{{ title }}</h1>
-    <a href="#">{{ main }}</a>
+    <a href="{% url 'platform' %}">{{ main }}</a>
     <p>
-    <a href="http://127.0.0.1:8000/platform/games/">{{ shop }}</a>
+        <a href="{% url 'games' %}">{{ shop }}</a>
+    </p>
     <p>
-    <a href="http://127.0.0.1:8000/platform/cart">{{ basket }}</a>
+        <a href="{% url 'cart' %}">{{ basket }}</a>
+    </p>
 </body>
 </html>

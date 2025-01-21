@@ -2,18 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Игры</title>
 </head>
 <body>
     <h1>Игры</h1>
     <ul>
-      <li>Atomic Heart
-          <button>Купить</button></li>
-      <li>Cyberpunk 2077
-          <button>Купить</button></li>
-      <li>Pay Day 2
-          <button>Купить</button></li>
-        <a href="http://127.0.0.1:8000/platform"><button>Вернуться обратно</button></a>
+        {% for game, button_text in games.items %}
+            <li>{{ game }} <button>{{ button_text }}</button></li>
+        {% endfor %}
     </ul>
+    <a href="{% url 'platform' %}"><button>Вернуться обратно</button></a>
 </body>
 </html>
+cart.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+</head>
+<body>
+    <h1>Извините, Ваша корзина пуста</h1>
+    <a href="{% url 'platform' %}"><button>Вернуться обратно</button></a>
+</body>
+</html>
+
+
